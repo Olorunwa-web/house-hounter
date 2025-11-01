@@ -5,6 +5,7 @@ import imagepost from '../assets/images/imagepost9.jpg';
 import time from '../assets/svg/time.svg';
 import bgblur1 from '../assets/images/bg-blur1.png';
 import bgblur2 from '../assets/images/bg-blur2.png';
+import {motion as Motion } from 'framer-motion';
 
 
 const Information = () => {
@@ -73,12 +74,26 @@ const postDate = useMemo(() => new Date("2025-10-31T00:00:00"), []);
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-7 mb-10'>
                 <div className=''>
                     <div className='grid grid-cols-1 gap-9 md:gap-9'>
-                        {information.map((info) =>(
+                        {information.map((info, index) =>(
                             <div key={info.id} className='flex sm:flex-row flex-col gap-5'>
                                 <div className='flex-shrink- h-full'>
-                                    <img src={info.infoimage} alt="infoimage" className='w-full h-full sm:h-[130px] object-cover rounded-xl'/>
+                                    <Motion.img 
+                                       initial = {{ opacity: 0, x: -60 }}
+                                       whileInView={{ opacity: 1, x: 0}}
+                                       transition={{
+                                         duration: 0.7,
+                                         delay: index * 0.3
+                                       }}
+                                    src={info.infoimage} alt="infoimage" className='w-full h-full sm:h-[130px] object-cover rounded-xl'/>
                                 </div>
-                                <div>
+                                <Motion.div
+                                 initial = {{ opacity: 0, y: 50 }}
+                                 whileInView={{ opacity: 1, y: 0}}
+                                 transition={{
+                                   duration: 0.8,
+                                   delay: index * 0.4
+                                 }}
+                                >
                                     <div className='flex items-center gap-2 mb-2'>
                                         <img src={info.personImg} alt="personImg" className='w-8 h-8 rounded-full object-cover'/>
                                         <span className='text-sm font-normal text-[#3C4563]'>{info.name}</span>
@@ -92,12 +107,19 @@ const postDate = useMemo(() => new Date("2025-10-31T00:00:00"), []);
                                         <span className='text-sm font-normal text-[#888B97] '>|</span>
                                         <span className='text-sm font-normal text-[#888B97]'>{info.date}</span>
                                     </div>
-                                </div>
+                                </Motion.div>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className='flex flex-col gap-5 '>
+                <Motion.div
+                 initial = {{ opacity: 0, y: 70 }}
+                 whileInView={{ opacity: 1, y: 0}}
+                 transition={{
+                  duration: 0.8,
+                  delay: 0.4
+                 }}
+                className='flex flex-col gap-5 '>
                     <div className='w-full sm:h-[270px]'>
                         <img src= {imgbg1} alt="" className='w-full object-cover rounded-xl h-full ' />
                     </div>
@@ -113,7 +135,7 @@ const postDate = useMemo(() => new Date("2025-10-31T00:00:00"), []);
                             <span className='text-sm font-normal text-[#888B97]'>{displayTime}</span>
                         </div>
                     </div>
-                </div>
+                </Motion.div>
             </div>
         </section>
         {/*  */}

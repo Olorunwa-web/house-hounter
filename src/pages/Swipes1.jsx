@@ -11,7 +11,6 @@ import { useSwiperController } from '../components/useSwiperController';
 const Swipes1 = () => {
 
 
-
      const { currentSwiperRef } = useSwiperController();
 
 
@@ -22,10 +21,8 @@ const Swipes1 = () => {
 
       <Swiper
        onSwiper={(swiper) => (currentSwiperRef.current = swiper)}
-       direction= {'horizontal'}
        modules={[Virtual, Mousewheel, FreeMode, Navigation]}
-    //    slidesPerView={4}
-    //    centeredSlides={true}
+    
     mousewheel={true}
     freeMode= {true}
        virtual

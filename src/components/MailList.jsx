@@ -9,6 +9,7 @@ import imagehouse from '../assets/images/imagehouse.jpg';
 import imagepost13 from '../assets/images/imagepost13.jpg';
 import imagechair2 from '../assets/images/imagechair (2).jpg';
 import imagepost14 from '../assets/images/imagepost8.jpg';
+import {motion as Motion } from 'framer-motion';
 
 
 
@@ -37,30 +38,86 @@ const MailList = () => {
                       </div>
                  </div>
                  {/*  */}
-                 <div className='absolute hidden lg:block top-0 -translate-y-1/2  left-0 w-16 h-16 border-2 rounded-3xl  border-white '>
+                 <Motion.div
+                   initial = {{ opacity: 0, x:-40 }}
+                   whileInView={{ opacity: 1, x: 0}}
+                   transition={{
+                     duration: 0.6,
+                     delay: 0.2
+                   }}
+                 className='absolute hidden lg:block top-0 -translate-y-1/2  left-0 w-16 h-16 border-2 rounded-3xl  border-white '>
                     <img src={imagechair}  className='w-full h-full rounded-3xl' alt="" />
-                 </div>
-                 <div className='absolute hidden lg:block top-0 -translate-x-1/2 -translate-y-1/4  left-1/6 w-10 h-10 border-2 rounded-3xl  border-white '>
+                 </Motion.div>
+                 <Motion.div
+                   initial = {{ opacity: 0, y:-40 }}
+                   whileInView={{ opacity: 1, y: 0}}
+                   transition={{
+                     duration: 0.7,
+                     delay: 0.4
+                   }}
+                 className='absolute hidden lg:block top-0 -translate-x-1/2 -translate-y-1/4  left-1/6 w-10 h-10 border-2 rounded-3xl  border-white '>
                     <img src={imagepost12}  className='w-full h-full rounded-3xl' alt="" />
-                 </div>
-                 <div className='absolute hidden lg:block top-1/2  left-0 w-10 h-10 border-2 rounded-3xl  border-white '>
+                 </Motion.div>
+                 <Motion.div 
+                  initial = {{ opacity: 0, x: 30 }}
+                   whileInView={{ opacity: 1, x: 0}}
+                   transition={{
+                     duration: 0.7,
+                     delay: 0.4
+                   }}
+                 className='absolute hidden lg:block top-1/2  left-0 w-10 h-10 border-2 rounded-3xl  border-white '>
                     <img src={imagepost1}  className='w-full h-full rounded-3xl' alt="" />
-                 </div>
-                 <div className='absolute hidden lg:block bottom-0 -translate-x-1/2 -translate-y-1/4  left-1/6 w-14 h-14 border-2 rounded-3xl  border-white '>
+                 </Motion.div>
+                 <Motion.div 
+                  initial = {{ opacity: 0, y: 40 }}
+                   whileInView={{ opacity: 1, y: 0}}
+                   transition={{
+                     duration: 0.6,
+                     delay: 0.2
+                   }}
+                 className='absolute hidden lg:block bottom-0 -translate-x-1/2 -translate-y-1/4  left-1/6 w-14 h-14 border-2 rounded-3xl  border-white '>
                     <img src={houseimage}  className='w-full h-full rounded-3xl' alt="" />
-                 </div>
-                  <div className='absolute hidden lg:block top-0 -translate-x-1/2 -translate-y-1/2 left-5/6  w-16 h-16 border-2 rounded-3xl  border-white '>
+                 </Motion.div>
+                  <Motion.div
+                    initial = {{ opacity: 0, x:-40 }}
+                    whileInView={{ opacity: 1, x: 0}}
+                    transition={{
+                     duration: 0.6,
+                     delay: 0.2
+                   }}
+                  className='absolute hidden lg:block top-0 -translate-x-1/2 -translate-y-1/2 left-5/6  w-16 h-16 border-2 rounded-3xl  border-white '>
                     <img src={imagehouse}  className='w-full h-full rounded-3xl' alt="" />
-                 </div>
-                  <div className='absolute hidden lg:block top-1/4 -translate-x-1/2 -translate-y-1/2  right-0 w-10 h-10 border-2 rounded-3xl  border-white '>
+                 </Motion.div>
+                  <Motion.div
+                    initial = {{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0}}
+                    transition={{
+                     duration: 0.7,
+                     delay: 0.4
+                   }}
+                  className='absolute hidden lg:block top-1/4 -translate-x-1/2 -translate-y-1/2  right-0 w-10 h-10 border-2 rounded-3xl  border-white '>
                     <img src={imagepost13}  className='w-full h-full rounded-3xl' alt="" />
-                 </div>
-                  <div className='absolute hidden lg:block top-1/2 -translate-x-1/2 -translate-y-1/2  left-6/7 w-10 h-10 border-2 rounded-3xl  border-white '>
+                 </Motion.div>
+                  <Motion.div
+                    initial = {{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0}}
+                    transition={{
+                     duration: 0.7,
+                     delay: 0.4
+                   }}
+                  className='absolute hidden lg:block top-1/2 -translate-x-1/2 -translate-y-1/2  left-6/7 w-10 h-10 border-2 rounded-3xl  border-white '>
                     <img src={imagepost14}  className='w-full h-full rounded-3xl' alt="" />
-                 </div>
-                 <div className='absolute hidden lg:block top-full -translate-x-1/2 -translate-y-1/2  right-0 w-14 h-14 border-2 rounded-3xl  border-white '>
+                 </Motion.div>
+                 <Motion.div 
+                   initial = {{ opacity: 0, y: 30 }}
+                   whileInView={{ opacity: 1, y: 0}}
+                   transition={{
+                     duration: 0.6,
+                     delay: 0.2
+                   }}
+                 className='absolute hidden lg:block top-full -translate-x-1/2 -translate-y-1/2  right-0 w-14 h-14 border-2 rounded-3xl  border-white '>
                     <img src={imagechair2}  className='w-full h-full rounded-3xl' alt="" />
-                 </div>
+                 </Motion.div>
                 </div>
             </div>
         </section>

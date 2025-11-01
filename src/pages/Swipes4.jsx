@@ -10,7 +10,6 @@ const Swipes4 = () => {
     <>
     <div className='py-4 mt-1  relative'>
         <Swiper
-            direction= {'horizontal'}
             modules={[Virtual, Mousewheel, FreeMode, Navigation, Pagination]}
             mousewheel={true}
             freeMode= {true}

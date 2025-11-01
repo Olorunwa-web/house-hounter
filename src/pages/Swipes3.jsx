@@ -16,7 +16,6 @@ const Swipes3 = () => {
         <div>
         <Swiper
          onSwiper={(swiper) => (currentSwiperRef.current = swiper)}
-         direction= {'horizontal'}
             modules={[Virtual, Mousewheel, FreeMode, Navigation]}
             mousewheel={true}
             freeMode= {true}

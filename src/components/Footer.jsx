@@ -4,6 +4,7 @@ import facebookIcon from '../assets/svg/facebookIcon.svg';
 import twitterIcon from '../assets/svg/twitterIcon.svg';
 import instagramIcon from '../assets/svg/instagramIcon.svg';
 import { footerLink } from '../db'
+import {motion as Motion } from 'framer-motion';
 
 
 const Footer = () => {
@@ -31,7 +32,13 @@ const Footer = () => {
                                 <h1 className='text-[#0E1735] text-[17px] font-semibold'>{foot.title}</h1>
                                 <div className='flex flex-col gap-4'>
                                     {foot?.link.map((lik) =>(
-                                        <a href="" className='text-sm text-[#888B97] font-normal '>{lik.link1}</a>
+                                        <Motion.a
+                                         whileHover={{x: 17}}
+                                         transition={{
+                                           duration: 0.27,
+                                           
+                                       }}
+                                        href="" className='text-sm text-[#888B97] font-normal '>{lik.link1}</Motion.a>
                                     ))}
                                 </div>
                                 

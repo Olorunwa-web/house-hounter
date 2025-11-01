@@ -3,6 +3,9 @@ import { houseLink } from '../db'
 import { NavLink, Outlet, useMatch } from 'react-router-dom'
 import House from '../pages/House';
 import SlideControl from '../components/SlideControl';
+import {motion as Motion } from 'framer-motion';
+
+
 
 const Housing = () => {
      const match = useMatch("/housing")
@@ -13,10 +16,19 @@ const Housing = () => {
       <section className="mt-14">
         {/*  */}
         <section className="px-4  md:px-10 xl:px-15  flex flex-col gap-2   max-w-screen-xl mx-auto">
-            <div className="flex items-center gap-2">
+            <Motion.div
+              initial = {{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0}}
+              transition={{
+                duration: 0.6,
+                delay:0.3
+              }}
+              viewport={{once: true, amount:0.3}}
+             
+            className="flex items-center gap-2">
                 <span className="bg-[#F59E0B] w-8 h-[2px] "></span>
                 <span className="text-sm text-[#F59E0B] font-medium ">Our Recomendation</span>
-            </div>
+            </Motion.div>
             <div className="pl-9 flex justify-between items-center">
                 <div>
                     <h1 className="text-[#1B1C57] font-semibold text-xl lg:text-2xl">Featured House</h1>
