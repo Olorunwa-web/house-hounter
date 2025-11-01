@@ -6,7 +6,7 @@ import Review from '../components/Review';
 import Information from '../components/Information';
 import MailList from '../components/MailList';
 import Footer from '../components/Footer';
-
+import Housing from '../components/Housing'
 const Home = () => {
 
   return (
@@ -15,7 +15,6 @@ const Home = () => {
       <section className='overflow-hidde bord'>
         <Nav/>
         <Hero/>
-        {/* <Housing/> */}
         <Outlet/>
         <HouseTour/>
         <Review />
