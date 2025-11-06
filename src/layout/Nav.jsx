@@ -17,7 +17,7 @@ const Nav = () => {
   return (
 
     <>
-      <nav className="fixed z-99  top-2 right-0 left-0  w-full">
+      <nav className="fixed z-99 top-3  md:top-2  right-0 left-0  w-full">
         <section className="py-3 px-4 xl:px-19  max-w-screen-2xl mx-auto">
             <div className="flex  relative justify-between items-center">
                 <div className='flex items-center gap-3'>
@@ -42,7 +42,7 @@ const Nav = () => {
                   </div>
                 </div>
                {isActive && (
-                 <div className={` ${isActive ? "fade-in" : "fade-out"} absolute pt-6 pb-6 px-5 w-full block bg-white md:hidden top-12  rounded-xl`}>
+                 <div className={` ${isActive ? "fade-in" : "fade-out"} absolute pt-6 pb-6 px-5 w-full block bg-white md:hidden top-13  rounded-xl`}>
                   <div className='flex flex-col gap-6'>
                     <div className='flex flex-col gap-6'>
                      <a href="#" className='text-sm font-bold text-[#1B1C57]'>About Us</a>
