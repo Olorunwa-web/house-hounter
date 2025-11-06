@@ -33,7 +33,7 @@ const Hero = () => {
                   delay: 0.3,                  
                  }}
                 className=' flex flex-col gap-4 md:gap-5 mb-4 '>
-                    <span className='text-2xl lg:text-4xl font-semibold text-[#1B1C57]'>Find The Place To Live <span className='' style={{WebkitTextStroke: '1px', WebkitTextFillColor: 'transparent',WebkitTextStrokeColor: '#1B1C57'}}>Your Dreams </span>Easily Here</span>
+                    <span className='text-3xl md:text-2xl  lg:text-4xl font-semibold text-[#1B1C57]'>Find The Place To Live <span className='' style={{WebkitTextStroke: '1px', WebkitTextFillColor: 'transparent',WebkitTextStrokeColor: '#1B1C57'}}>Your Dreams </span>Easily Here</span>
                     <p className='pt-2 font-normal text-base text-[#626687] '>Everything you need about finding your place to live will be here, where it will be easier for you</p>
                 </Motion.div>
                 <Motion.div 

@@ -84,6 +84,7 @@ const postDate = useMemo(() => new Date("2025-10-31T00:00:00"), []);
                                          duration: 0.7,
                                          delay: index * 0.3
                                        }}
+                                       viewport={{once: true, amount:0.3}}
                                     src={info.infoimage} alt="infoimage" className='w-full h-full sm:h-[130px] object-cover rounded-xl'/>
                                 </div>
                                 <Motion.div
@@ -93,6 +94,7 @@ const postDate = useMemo(() => new Date("2025-10-31T00:00:00"), []);
                                    duration: 0.8,
                                    delay: index * 0.4
                                  }}
+                                 viewport={{once: true, amount:0.3}}
                                 >
                                     <div className='flex items-center gap-2 mb-2'>
                                         <img src={info.personImg} alt="personImg" className='w-8 h-8 rounded-full object-cover'/>
@@ -119,6 +121,7 @@ const postDate = useMemo(() => new Date("2025-10-31T00:00:00"), []);
                   duration: 0.8,
                   delay: 0.4
                  }}
+                 viewport={{once: true, amount:0.3}}
                 className='flex flex-col gap-5 '>
                     <div className='w-full sm:h-[270px]'>
                         <img src= {imgbg1} alt="" className='w-full object-cover rounded-xl h-full ' />
